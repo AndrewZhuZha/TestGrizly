@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const about        = document.getElementById('about');
   const aboutCounter = document.getElementById('aboutCounter');
 
-  /* ---------- HELPERS ---------- */
   const showError = (field, msg) => {
     const errorDiv = field.closest('.field')?.querySelector('.error');
     if (errorDiv) errorDiv.textContent = msg || '';
@@ -162,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // успех
+      // если форма отправлена успешно
       form.reset();
       form.querySelectorAll('.error').forEach(el => el.textContent = '');
       form.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
@@ -173,3 +172,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
