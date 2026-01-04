@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const about        = document.getElementById('about');
   const aboutCounter = document.getElementById('aboutCounter');
 
+  /* ---------- HELPERS ---------- */
   const showError = (field, msg) => {
     const errorDiv = field.closest('.field')?.querySelector('.error');
     if (errorDiv) errorDiv.textContent = msg || '';
@@ -160,16 +161,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return;
       }
-
-      // если форма отправлена успешно
       form.reset();
       form.querySelectorAll('.error').forEach(el => el.textContent = '');
       form.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
-      alert("✅ Данные отправлены! С вами свяжутся!");
+      form.innerHTML = ` <div class="success-message"> <h2>Данные приняты,<br/>мы с вами свяжемся!</h2> </div> `;
     } catch (err) {
       alert("Ошибка соединения. Попробуйте позже.");
       console.error('Fetch error:', err);
     }
   });
 });
-
