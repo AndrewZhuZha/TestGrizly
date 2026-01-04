@@ -176,7 +176,7 @@ textarea { resize: none; line-height: 1.4; max-height: calc(1.4em * 7); }
   margin: 0 auto;
   padding: 60px 20px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* ровно 4 колонки */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 40px;
 }
 
@@ -211,8 +211,8 @@ textarea { resize: none; line-height: 1.4; max-height: calc(1.4em * 7); }
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column; /* элементы идут вертикально */
-  gap: 8px;               /* расстояние между пунктами */
+  flex-direction: column; 
+  gap: 8px;               
 }
 
 .footer-col ul li {
@@ -242,7 +242,7 @@ textarea { resize: none; line-height: 1.4; max-height: calc(1.4em * 7); }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* перенос при нехватке места */
+  flex-wrap: wrap; 
   gap: 12px;
   font-size: 13px;
   color: #777;
@@ -257,6 +257,19 @@ textarea { resize: none; line-height: 1.4; max-height: calc(1.4em * 7); }
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+.success-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  text-align: center;
+}
+
+.success-message h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff; 
 }
 
 
